@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navigation"
+            app:startDestination="@id/mainActivity2">
+    <activity android:id="@+id/mainActivity2" android:name="org.d3if4031.praassesment.MainActivity"
+              android:label="activity_main" tools:layout="@layout/activity_main"/>
+    <fragment android:id="@+id/fragmentPesergi1" android:name="org.d3if4031.praassesment.FragmentPesergi1"
+              android:label="fragment_pesergi1" tools:layout="@layout/fragment_pesergi1"/>
+    <fragment android:id="@+id/fragmentSegitiga" android:name="org.d3if4031.praassesment.FragmentSegitiga"
+              android:label="fragment_segitiga" tools:layout="@layout/fragment_segitiga"/>
+    <fragment android:id="@+id/fragmentAbout" android:name="org.d3if4031.praassesment.FragmentAbout"
+              android:label="fragment_about" tools:layout="@layout/fragment_about">
+        <action android:id="@+id/action_fragmentAbout_to_pilih" app:destination="@id/pilih"/>
+    </fragment>
+    <fragment android:id="@+id/pilih" android:name="org.d3if4031.praassesment.Pilih" android:label="fragment_pilih"
+              tools:layout="@layout/fragment_pilih">
+        <action android:id="@+id/action_pilih_to_fragmentPesergi1" app:destination="@id/fragmentPesergi1"/>
+        <action android:id="@+id/action_pilih_to_fragmentSegitiga" app:destination="@id/fragmentSegitiga"/>
+    </fragment>
+</navigation>
